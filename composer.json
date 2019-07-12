@@ -1,0 +1,42 @@
+{
+	"name": "squadron-api/user",
+	"description": "Squadron API User package",
+	"keywords": ["laravel", "squadron", "user", "api"],
+	"license": "MIT",
+	"authors": [{
+		"name": "Andrey Novikov",
+		"email": "andrew@7glyphs.com",
+		"homepage": "https://7glyphs.com",
+		"role": "Developer"
+	}],
+	"require": {
+		"php": ">=7.2",
+		"illuminate/console": "^5.8",
+		"illuminate/database": "^5.8",
+		"laravel/passport": "^7.0",
+		"laravel/socialite": "^3.0",
+		"illuminate/support": "^5.8",
+		"socialiteproviders/instagram": "^3.0",
+		"squadron-api/crud": "0.0.*"
+	},
+	"require-dev": {
+		"squadron-api/test-helpers": "0.0.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Squadron\\User\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Squadron\\User\\Tests\\": "tests/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Squadron\\User\\ServiceProvider"
+			]
+		}
+	}
+}
